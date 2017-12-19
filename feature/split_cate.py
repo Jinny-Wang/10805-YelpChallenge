@@ -4,11 +4,23 @@ import json
 feature_path = "/Users/yixu/Desktop/yelp/feature/dataset/full/meta/full_feature.csv"
 cate_path = "/Users/yixu/Desktop/yelp/feature/dataset/full/meta/businessid_category.json"
 out_dir = "/Users/yixu/Desktop/yelp/feature/dataset/full/clusters/"
-  
+   
 def get_cate_dir(): 
 	with open(cate_path, 'r') as cate_f: 
 		cate_dir = json.loads(cate_f.readline())
 	return cate_dir
+
+def getCate(u):
+		# if u == 0: 
+		# 	return 0
+		# elif u <= 7: 
+		# 	return 1
+		# else: 
+		# 	return 2
+		if u == 0:
+			return 0
+		else: 
+			return 1
 
 def split_by_cate(): 
 	# business_id : category
@@ -25,18 +37,19 @@ def split_by_cate():
 	# print writers
 
 	count = 0
+
 	with open(feature_path, 'r') as fea_f:
+		reader = csv.reader(fea_f,delimiter = '\t')
 		print "start write....."
-		for row in fea_f: 
-			business_id = row.split()[1]
+		for row in reader: 
+			business_id = row[1]
 			cates = cate_dir.get(business_id, "Not Found")
 			# print cates
 			for cate in cates: 
 				if writers.has_key(cate): 
 					writer = writers[cate]
 					# print row
-					writer.writerow([row])
-
+					writer.writerow(row)
 			count += 1
 			if not count % 50000: 
 				print "Finished " + str(count)

@@ -1,11 +1,13 @@
 import sys
 import json
+import math
 
 '''
-写让自己自豪的代码
-做让自己开心的事情
-嘻嘻嘻
+call python pipeline.py filename
+
+filename: food, health, etc. 
 '''
+
 '''
 Predict usefulness score in the specified category with the metadata of business, reviews, and users. 
 
@@ -48,20 +50,104 @@ clustername = {'Active Life':'active_life',
               'Health & Medical':'health','Home & Garden':'home&garden','Home Services':'home_service','Hotels & Travel':'hotel&travel','Nightlife':'nightlife',
               'Pets':'pets','Real Estate':'real_estate','Shopping':'shopping'}
 
+cate_path = "/Users/yixu/Desktop/yelp/feature/dataset/full/meta/businessid_category.json"
+R2B_path = "/Users/yixu/Desktop/yelp/feature/dataset/full/meta/R2B.json"
+B2R_path = "/Users/yixu/Desktop/yelp/feature/dataset/full/meta/B2R.json"
+dir_path = "/Users/yixu/Desktop/yelp/feature/dataset/full/clusters/"
+
 # row[0] row[1] should be the review id and business id respectively
 # the function should return everything except for the two ids
 # log the elapse time
-def load_feature(row): 
+def parse(row):
+	for i in range(2, len(row)): 
+		row[i] = float(row[i])
+	if row[18] > 0:
+		row[18] = math.log(row[18])
+	return row[2:]
 
-	return row
-
+def getCate(u):
+		# if u == 0: 
+		# 	return 0
+		# elif u <= 7: 
+		# 	return 1
+		# else: 
+		# 	return 2
+		if u == 0:
+			return 0
+		else: 
+			return 1
 
 def model_fit(category = 'food'): 
+	with open(''.join([dir_path, category, '.csv'])) as csv_file: 
+		reader = csv.reader(csv_file, delimiter = '\t')
+		# X is N by M = 17, where M is the num of features and N is the number of training examples
+		X = []
+		# Y is N by 1, format of each row: [usefulness_score]
+		Y = []
+		print "loading data ---------------------"
+		count = 0
+		for row in reader: 
+			row = parse(row)
+			# if not valid
+			if not row[-1]: 
+				continue
+			# print "isValid", row[-1]
+
+			useful = getCate(row[-2])
+			# print "usefulness score", useful
+			# preserve only the feature values in a vector
+			row  = row[:-2]
+			X.append(row)
+			Y.append([useful])
+			# print X
+			# print Y
+
+			count += 1
+			# if count >= 5: 
+			# 	break
+			if count % 50000 == 0: 
+				print "finished " + str(count)
+
+		X = np.array(X)
+		Y = np.array(Y)
+
+		print "-------------start training--------------"
+		clf = tree.DecisionTreeClassifier()
+		clf.fit(X_train, Y_train)
+
+		# print "training feature***********************"
+		# print X_train.shape
+		# print "training label*************************"
+		# print Y_train.shape
+		# print "testing feature************************"
+		# print X_test.shape
+		# print "testing label**************************"
+		# print Y_test.shape
+
+		print "-------------start predicting---------------"
+		X_train = X_train.tolist()
+		Y_train = Y_train.tolist()
+		X_test = X_test.tolist()
+		Y_test = Y_test.tolist()
+
+		train_pred = clf.predict(X_train)
+		test_pred = clf.predict(X_test)
+		print "-------------finish predicting---------------"
+
+		train_f1 = f1_score(Y_train, train_pred, average = None)
+		test_f1 = f1_score(Y_test, test_pred, average = None)
+		train_accuracy = accuracy_score(Y_train, train_pred)
+		test_accuracy = accuracy_score(Y_test, test_pred)
+		train_recall = recall_score(Y_train, train_pred, average = None)
+		test_recall = recall_score(Y_test, test_pred, average = None)
+		train_precision = precision_score(Y_train,train_pred,average=None)
+		test_precision = precision_score(Y_test,test_pred,average=None)
+		print category
+		print "train_f1 " + str(train_f1)
+		print "test_f1 " + str(test_f1)
+		print "train_accuracy " + str(train_accuracy)
+		print "test_accuracy " + str(test_accuracy)
 	return 
-
-
-
-
 
 
 if __name__ == "__main__": 

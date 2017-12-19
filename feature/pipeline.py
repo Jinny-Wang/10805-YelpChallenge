@@ -5,7 +5,7 @@ import math
 '''
 call python pipeline.py filename
 
-filename: food, health, etc. 
+filename: full_feature, food, health, etc. 
 '''
 
 '''
@@ -55,6 +55,9 @@ R2B_path = "/Users/yixu/Desktop/yelp/feature/dataset/full/meta/R2B.json"
 B2R_path = "/Users/yixu/Desktop/yelp/feature/dataset/full/meta/B2R.json"
 dir_path = "/Users/yixu/Desktop/yelp/feature/dataset/full/clusters/"
 
+MAX_DEPTH = 3
+MAX_FEATURES = 6
+
 # row[0] row[1] should be the review id and business id respectively
 # the function should return everything except for the two ids
 # log the elapse time
@@ -66,18 +69,9 @@ def parse(row):
 	return row[2:]
 
 def getCate(u):
-		# if u == 0: 
-		# 	return 0
-		# elif u <= 7: 
-		# 	return 1
-		# else: 
-		# 	return 2
-		if u == 0:
-			return 0
-		else: 
-			return 1
+		return 0 if u == 0 else 1
 
-def model_fit(category = 'food'): 
+def model_fit(category): 
 	with open(''.join([dir_path, category, '.csv'])) as csv_file: 
 		reader = csv.reader(csv_file, delimiter = '\t')
 		# X is N by M = 17, where M is the num of features and N is the number of training examples
@@ -110,9 +104,10 @@ def model_fit(category = 'food'):
 
 		X = np.array(X)
 		Y = np.array(Y)
+		X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, random_state = 34)
 
 		print "-------------start training--------------"
-		clf = tree.DecisionTreeClassifier()
+		clf = tree.DecisionTreeClassifier(max_depth=MAX_DEPTH,max_features=MAX_FEATURES)
 		clf.fit(X_train, Y_train)
 
 		# print "training feature***********************"

@@ -1,0 +1,47 @@
+NB **********************************
+Three classification
+random_state = 34
+train_accuracy 0.574762907288
+test_accuracy 0.573103503376
+
+Binary classification
+train_f1 [ 0.71161412  0.31021423]
+test_f1 [ 0.70907877  0.31204006]
+train_accuracy 0.593272863214
+test_accuracy 0.591079774697
+
+Random Forest**************************
+Random-state = 34
+Three classification
+train_accuracy 0.726561270266
+test_accuracy 0.603363560101
+
+Binary classification
+train_f1 [ 0.78630051  0.69842908]
+test_f1 [ 0.6910665   0.57294108]
+train_accuracy 0.749857350858
+test_accuracy 0.64148324212
+
+Decision Tree*************************
+Random-state = 34
+Three classification
+train_accuracy 0.731450692586
+test_accuracy 0.600007989454
+
+Binary classification
+train_f1 [ 0.79618979  0.69157353]
+test_f1 [ 0.6963438   0.54535252]
+train_accuracy 0.754564772548
+test_accuracy 0.635880637558
+
+SVM*********************************
+train_f1 [ 0.75981406  0.64213408]
+test_f1 [ 0.70470213  0.57446886]
+train_accuracy 0.712552140721
+test_accuracy 0.651350217713
+
+
+
+
+
+

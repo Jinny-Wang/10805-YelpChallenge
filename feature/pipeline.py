@@ -78,6 +78,7 @@ def model_fit(category):
 		X = []
 		# Y is N by 1, format of each row: [usefulness_score]
 		Y = []
+
 		print "loading data ---------------------"
 		count = 0
 		for row in reader: 
@@ -106,44 +107,55 @@ def model_fit(category):
 		Y = np.array(Y)
 		X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, random_state = 34)
 
-		print "-------------start training--------------"
-		clf = tree.DecisionTreeClassifier(max_depth=MAX_DEPTH,max_features=MAX_FEATURES)
-		clf.fit(X_train, Y_train)
 
-		# print "training feature***********************"
-		# print X_train.shape
-		# print "training label*************************"
-		# print Y_train.shape
-		# print "testing feature************************"
-		# print X_test.shape
-		# print "testing label**************************"
-		# print Y_test.shape
+		#depth = [2,3,4,5]
+		features = [3,4,5,6,7,8,9, 10, 11]
+		depth = [5,6,7,8]
+		best_accuracy = 0
+		best_param = None
+		for d in depth:
+			for f in features:
+				print("max depth",d,"max features",f)
+				print "-------------start training--------------"
+				clf = tree.DecisionTreeClassifier(max_depth=MAX_DEPTH,max_features=MAX_FEATURES)
+				clf.fit(X_train, Y_train)
 
-		print "-------------start predicting---------------"
-		X_train = X_train.tolist()
-		Y_train = Y_train.tolist()
-		X_test = X_test.tolist()
-		Y_test = Y_test.tolist()
+				# print "training feature***********************"
+				# print X_train.shape
+				# print "training label*************************"
+				# print Y_train.shape
+				# print "testing feature************************"
+				# print X_test.shape
+				# print "testing label**************************"
+				# print Y_test.shape
 
-		train_pred = clf.predict(X_train)
-		test_pred = clf.predict(X_test)
-		print "-------------finish predicting---------------"
+				print "-------------start predicting---------------"
+				# X_train = X_train.tolist()
+				# Y_train = Y_train.tolist()
+				# X_test = X_test.tolist()
+				# Y_test = Y_test.tolist()
 
-		train_f1 = f1_score(Y_train, train_pred, average = None)
-		test_f1 = f1_score(Y_test, test_pred, average = None)
-		train_accuracy = accuracy_score(Y_train, train_pred)
-		test_accuracy = accuracy_score(Y_test, test_pred)
-		train_recall = recall_score(Y_train, train_pred, average = None)
-		test_recall = recall_score(Y_test, test_pred, average = None)
-		train_precision = precision_score(Y_train,train_pred,average=None)
-		test_precision = precision_score(Y_test,test_pred,average=None)
-		print category
-		print "train_f1 " + str(train_f1)
-		print "test_f1 " + str(test_f1)
-		print "train_accuracy " + str(train_accuracy)
-		print "test_accuracy " + str(test_accuracy)
-	return 
+				train_pred = clf.predict(X_train)
+				test_pred = clf.predict(X_test)
+				print "-------------finish predicting---------------"
 
+				train_f1 = f1_score(Y_train, train_pred, average = None)
+				test_f1 = f1_score(Y_test, test_pred, average = None)
+				train_accuracy = accuracy_score(Y_train, train_pred)
+				test_accuracy = accuracy_score(Y_test, test_pred)
+				train_recall = recall_score(Y_train, train_pred, average = None)
+				test_recall = recall_score(Y_test, test_pred, average = None)
+				train_precision = precision_score(Y_train,train_pred,average=None)
+				test_precision = precision_score(Y_test,test_pred,average=None)
+				print category
+				print "train_f1 " + str(train_f1)
+				print "test_f1 " + str(test_f1)
+				print "train_accuracy " + str(train_accuracy)
+				print "test_accuracy " + str(test_accuracy)
+				if test_accuracy > best_accuracy:
+						best_accuracy = test_accuracy
+						best_param = (d,f)
+		print(best_accuracy,best_param)
 
 if __name__ == "__main__": 
 	category = sys.argv[1]

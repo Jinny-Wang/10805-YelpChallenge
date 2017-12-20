@@ -1,0 +1,325 @@
+('max depth', 5, 'max features', 3)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.6133879   0.61706086]
+test_f1 [ 0.61480503  0.61673105]
+train_accuracy 0.615233148178
+test_accuracy 0.615770456263
+('max depth', 5, 'max features', 4)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.57540697  0.66764723]
+test_f1 [ 0.57642668  0.66712228]
+train_accuracy 0.627147230139
+test_accuracy 0.627211510035
+('max depth', 5, 'max features', 5)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.62040881  0.61224146]
+test_f1 [ 0.62199703  0.61231877]
+train_accuracy 0.616368604753
+test_accuracy 0.617219065138
+('max depth', 5, 'max features', 6)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.60813186  0.63716165]
+test_f1 [ 0.60825421  0.63634089]
+train_accuracy 0.623205067983
+test_accuracy 0.622819695825
+('max depth', 5, 'max features', 7)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.5490174   0.67274182]
+test_f1 [ 0.55008929  0.6725278 ]
+train_accuracy 0.620714436139
+test_accuracy 0.620950629044
+('max depth', 5, 'max features', 8)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.57444086  0.66047786]
+test_f1 [ 0.57552289  0.65975465]
+train_accuracy 0.622296994708
+test_accuracy 0.622277699307
+('max depth', 5, 'max features', 9)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.54602253  0.67241354]
+test_f1 [ 0.54730311  0.67239095]
+train_accuracy 0.619437731832
+test_accuracy 0.619873205663
+('max depth', 5, 'max features', 10)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.5456866   0.67378911]
+test_f1 [ 0.54688358  0.67353513]
+train_accuracy 0.620250180027
+test_accuracy 0.620497322866
+('max depth', 5, 'max features', 11)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.5626213   0.66929433]
+test_f1 [ 0.5638787  0.6689222]
+train_accuracy 0.623365294739
+test_accuracy 0.62359163026
+('max depth', 6, 'max features', 3)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.60872888  0.63828   ]
+test_f1 [ 0.60885688  0.63750661]
+train_accuracy 0.624084307742
+test_accuracy 0.623726308183
+('max depth', 6, 'max features', 4)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.59277572  0.65657017]
+test_f1 [ 0.59354825  0.6559492 ]
+train_accuracy 0.62738373797
+test_accuracy 0.62734290313
+('max depth', 6, 'max features', 5)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.57448871  0.66232237]
+test_f1 [ 0.57562588  0.66208597]
+train_accuracy 0.623459824875
+test_accuracy 0.623759156456
+('max depth', 6, 'max features', 6)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.5490174   0.67274182]
+test_f1 [ 0.55008929  0.6725278 ]
+train_accuracy 0.620714436139
+test_accuracy 0.620950629044
+('max depth', 6, 'max features', 7)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.58070885  0.66060338]
+test_f1 [ 0.58195457  0.66017168]
+train_accuracy 0.624862812684
+test_accuracy 0.625099366028
+('max depth', 6, 'max features', 8)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.55532293  0.66670349]
+test_f1 [ 0.55605409  0.66593365]
+train_accuracy 0.618986250063
+test_accuracy 0.618753079526
+('max depth', 6, 'max features', 9)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.61434435  0.61729679]
+test_f1 [ 0.61574094  0.61692812]
+train_accuracy 0.615826242661
+test_accuracy 0.616335446572
+('max depth', 6, 'max features', 10)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.59704619  0.64321896]
+test_f1 [ 0.59769681  0.64271848]
+train_accuracy 0.621535643883
+test_accuracy 0.621541897973
+('max depth', 6, 'max features', 11)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.62040881  0.61224146]
+test_f1 [ 0.62199703  0.61231877]
+train_accuracy 0.616368604753
+test_accuracy 0.617219065138
+('max depth', 7, 'max features', 3)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.62040881  0.61224146]
+test_f1 [ 0.62199703  0.61231877]
+train_accuracy 0.616368604753
+test_accuracy 0.617219065138
+('max depth', 7, 'max features', 4)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.60691281  0.6339502 ]
+test_f1 [ 0.60807966  0.63393189]
+train_accuracy 0.620912985922
+test_accuracy 0.621446637979
+('max depth', 7, 'max features', 5)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.62040881  0.61224146]
+test_f1 [ 0.62199703  0.61231877]
+train_accuracy 0.616368604753
+test_accuracy 0.617219065138
+('max depth', 7, 'max features', 6)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.54399576  0.67294133]
+test_f1 [ 0.54440426  0.67246359]
+train_accuracy 0.619085159973
+test_accuracy 0.618904181585
+('max depth', 7, 'max features', 7)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.5957004   0.64751349]
+test_f1 [ 0.59687426  0.64721299]
+train_accuracy 0.62338062395
+test_accuracy 0.623719738528
+('max depth', 7, 'max features', 8)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.57907802  0.65584824]
+test_f1 [ 0.58006434  0.65530658]
+train_accuracy 0.621314830245
+test_accuracy 0.621387511086
+('max depth', 7, 'max features', 9)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.58967705  0.65456378]
+test_f1 [ 0.59050399  0.65402528]
+train_accuracy 0.624905880468
+test_accuracy 0.624935124659
+('max depth', 7, 'max features', 10)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.6133879   0.61706086]
+test_f1 [ 0.61480503  0.61673105]
+train_accuracy 0.615233148178
+test_accuracy 0.615770456263
+('max depth', 7, 'max features', 11)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.57096144  0.66655359]
+test_f1 [ 0.57226683  0.66620075]
+train_accuracy 0.624749668506
+test_accuracy 0.625027099826
+('max depth', 8, 'max features', 3)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.57444086  0.66047786]
+test_f1 [ 0.57552289  0.65975465]
+train_accuracy 0.622296994708
+test_accuracy 0.622277699307
+('max depth', 8, 'max features', 4)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.62659532  0.61173623]
+test_f1 [ 0.62786142  0.61169229]
+train_accuracy 0.619310718367
+test_accuracy 0.619948756693
+('max depth', 8, 'max features', 5)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.62391094  0.61326852]
+test_f1 [ 0.62526394  0.61319404]
+train_accuracy 0.618663971645
+test_accuracy 0.61932463949
+('max depth', 8, 'max features', 6)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.56398791  0.66754624]
+test_f1 [ 0.56549631  0.66688332]
+train_accuracy 0.622744826665
+test_accuracy 0.622885392373
+('max depth', 8, 'max features', 7)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.57030431  0.65793369]
+test_f1 [ 0.57129123  0.65740795]
+train_accuracy 0.619093919522
+test_accuracy 0.619157113294
+('max depth', 8, 'max features', 8)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.57030431  0.65793369]
+test_f1 [ 0.57129123  0.65740795]
+train_accuracy 0.619093919522
+test_accuracy 0.619157113294
+('max depth', 8, 'max features', 9)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.58875542  0.65706864]
+test_f1 [ 0.58975015  0.65646266]
+train_accuracy 0.626005933865
+test_accuracy 0.626058535624
+('max depth', 8, 'max features', 10)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.57517581  0.66320393]
+test_f1 [ 0.57635397  0.66276899]
+train_accuracy 0.624277017826
+test_accuracy 0.624468679171
+('max depth', 8, 'max features', 11)
+-------------start training--------------
+-------------start predicting---------------
+-------------finish predicting---------------
+full_feature
+train_f1 [ 0.54782785  0.6731428 ]
+test_f1 [ 0.54946959  0.67265952]
+train_accuracy 0.620564428857
+test_accuracy 0.620819235949
+(0.6273429031304405, (6, 4))

@@ -158,5 +158,7 @@ def model_fit(category):
 		print(best_accuracy,best_param)
 
 if __name__ == "__main__": 
-	category = sys.argv[1]
-	model_fit(category)
+	# category = sys.argv[1]
+	for category in clustername.values(): 
+		# print category
+		model_fit(category)

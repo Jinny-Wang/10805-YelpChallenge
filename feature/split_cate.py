@@ -10,17 +10,6 @@ def get_cate_dir():
 		cate_dir = json.loads(cate_f.readline())
 	return cate_dir
 
-def getCate(u):
-		# if u == 0: 
-		# 	return 0
-		# elif u <= 7: 
-		# 	return 1
-		# else: 
-		# 	return 2
-		if u == 0:
-			return 0
-		else: 
-			return 1
 
 def split_by_cate(): 
 	# business_id : category
